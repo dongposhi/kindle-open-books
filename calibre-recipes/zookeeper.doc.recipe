@@ -1,0 +1,19 @@
+from calibre.web.feeds.recipes import BasicNewsRecipe
+
+class Mastering_Perl(BasicNewsRecipe):
+    title = 'Mastering ZooKeeper'
+    description = ''
+    cover_url = 'http://zookeeper.apache.org/doc/r3.5.0-alpha/images/zookeeper_small.gif'
+
+    no_stylesheets = True
+
+    def parse_index(self):
+        articles = [{'title':'Overview','url':'http://zookeeper.apache.org/doc/r3.5.0-alpha/zookeeperOver.html'},
+                    {'title':'Getting started','url':'http://zookeeper.apache.org/doc/current/zookeeperStarted.html'},
+                    {'title':'Programmer\'s guid','url':'http://zookeeper.apache.org/doc/current/zookeeperProgrammers.html'},
+                    {'title':'Java example','url':'http://zookeeper.apache.org/doc/current/javaExample.html'}
+                   ]
+ 
+        ans = [('ZooKeeper', articles)]
+
+        return ans
